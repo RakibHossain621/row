@@ -1,0 +1,132 @@
+@import '../../../style/vars.less';
+
+.compose {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  border-top: 2px solid @grey;
+
+  .toolbar-button {
+    color: @grey-color;
+    margin-left: 15px;
+  }
+
+  .toolbar-button:hover {
+    color: @grey-color;
+  }
+
+  .compose-input {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    height: 100%;
+    background: none;
+    color: @black;
+    outline: thin;
+    border-right: 2px solid @gray;
+    max-width: 80%;
+  }
+
+  .compose-input::placeholder {
+    opacity: 0.3;
+  }
+
+  .grp-icons {
+    cursor: pointer;
+    position: relative;
+    font-size: 22px;
+    height: 100%;
+    color: @grey-color;
+    min-width: 15%;
+    border-right: 2px solid @gray;
+    text-align: center;
+
+    &.custom {
+      display: flex;
+
+      .anticon-send {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .grp-file-icon {
+
+    .avatar-uploader {
+      vertical-align: -0.2em;
+
+      .ant-upload {
+        width: auto;
+        height: auto;
+        background: transparent;
+        border: none;
+        margin: 0;
+
+        img {
+          display: none;
+          width: 20px !important;
+          height: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .ant-upload-select.ant-upload-select-picture-card .anticon {
+      position: unset;
+      top: unset;
+      left: unset;
+      color: @grey-color;
+      ;
+      font-size: 22px;
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  .grp-send {
+    height: 100%;
+    background: @theme-color;
+
+    .anticon {
+      font-size: 18px;
+      color: @white;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background: @primary-color;
+    }
+  }
+
+
+
+  &.stream {
+    border-color: @primary-color;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    .grp-icons {
+
+      padding: 0 10px;
+      cursor: pointer;
+      position: relative;
+      font-size: 22px;
+      color: #8a96a3;
+      min-width: 20%;
+
+
+      .grp-emotions {
+        // position: relative;
+        right: 0;
+        top: 0;
+
+
+      }
+    }
+
+    .grp-send {
+      padding: 5px 15px;
+    }
+  }
+}

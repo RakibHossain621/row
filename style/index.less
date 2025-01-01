@@ -1,0 +1,65 @@
+@import '../node_modules/antd/dist/antd.less';
+@import './videojs.less';
+// @import './vars.less';
+// @import './global.less';
+// @import './responsive.less';
+// @import './dark-mode.less';
+@import '~suneditor/dist/css/suneditor.min.css';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+// &::-webkit-scrollbar-thumb {
+//   background-color: darkcyan;
+// }
+
+// &::-webkit-scrollbar {
+//   width: 4px;
+//   height: 5px;
+// }
+
+.table-responsive,
+.ant-table {
+  overflow: auto;
+
+  .ant-table tbody>tr>td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    .ant-tag {
+      margin: 0;
+    }
+  }
+}
+
+.list-disc{
+  list-style-type: disc;
+}
+
+// Custom Scrollbar
+
+/* For WebKit browsers */
+*::-webkit-scrollbar {
+  width: 4px; 
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px; 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}

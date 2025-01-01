@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default ({\n  children\n}) => children;","map":{"version":3,"names":["children"],"sources":["C:/Users/Rokibul/Documents/case/src/layouts/public-layout.tsx"],"sourcesContent":["export default ({ children }) => children;\n"],"mappings":"AAAA,eAAe,CAAC;EAAEA;AAAS,CAAC,KAAKA,QAAQ","ignoreList":[]},"metadata":{},"sourceType":"module"}

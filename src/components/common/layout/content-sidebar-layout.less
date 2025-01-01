@@ -1,0 +1,425 @@
+@import '../../../../style/vars.less';
+
+.btnStatus {
+  justify-content: center;
+
+  .ant-btn {
+    height: 28px;
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: @tablet-screen) {
+    .ant-btn {
+      height: 24px;
+      font-size: 8px;
+    }
+  }
+}
+
+.follow {
+
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  background-color: rgb(59, 125, 212);
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.follow-female {
+
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  background-color: #ff69b4;
+  color: aliceblue;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.follow-back {
+
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  background-color: red;
+  color: aliceblue;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 13px;
+
+}
+
+.follow-back-notification {
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  background-color: red;
+  color: aliceblue;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 8px;
+
+}
+
+.sidebar-content,
+.leftbar-content {
+  .content-sider {
+    background: transparent;
+    text-align: center;
+    height: 100%;
+
+    div {
+      background-color: transparent;
+    }
+
+    .performer-info {
+      display: grid;
+
+      .performer-name {
+        justify-self: center;
+        width: min-content;
+        max-width: min-content;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 2px;
+        border-radius: 50%;
+        border: 2px solid @primary-color;
+        cursor: pointer;
+      }
+
+      .btn-following {
+        margin-left: 0;
+
+        .follow {
+          border-radius: unset;
+          width: 88%;
+          background: red;
+          border: 1px solid red;
+          border-radius: 5px 5px 5px 5px;
+          font-size: small;
+
+          @media screen and (max-width: @mobile-screen) {
+            font-size: smaller;
+          }
+        }
+
+        .follow-female {
+          border-radius: unset;
+          width: 88%;
+          background: red;
+          border: 1px solid red;
+          border-radius: 5px 5px 5px 5px;
+          font-size: x-small;
+
+          @media screen and (max-width: 950px) {
+            font-size: xx-small;
+          }
+
+          @media screen and (max-width: @mobile-screen) {
+            font-size: xx-small;
+          }
+        }
+      }
+
+      .total-subscriber {
+        color: @primary-color;
+        overflow-wrap: break-word;
+      }
+
+      @media screen and (max-width: 950px) {
+        font-size: small;
+      }
+
+      @media screen and (max-width: @mobile-screen) {
+        font-size: x-small;
+      }
+    }
+
+    .lib-icons {
+      margin-top: 30px;
+      min-height: 100px;
+
+      .ant-btn {
+        font-size: 12px;
+      }
+
+      .wrapper-sidebar-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .anticon {
+        border-radius: 50%;
+        cursor: pointer;
+        color: black;
+        background-color: transparent;
+        padding: 7px;
+        font-size: 25px;
+      }
+
+      .active-icon {
+        color: @primary-color;
+      }
+
+      .disable-icon {
+        pointer-events: none;
+      }
+
+      .btn-live {
+        background-color: @red;
+        color: @white;
+        max-width: 75px;
+        height: auto;
+        border-radius: 5px;
+
+        span {
+          word-wrap: break-word;
+          white-space: normal;
+        }
+
+        &:hover {
+          background-color: @white;
+          color: @hover-color;
+        }
+      }
+
+      .total-like,
+      .total-stats {
+        color: black;
+        font-size: 17px;
+        height: fit-content;
+
+        @media screen and (max-width: @tablet-screen) {
+          font-size: 12px;
+          color: white;
+        }
+      }
+    }
+
+    .gr-icons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      height: 100%;
+      justify-content: center;
+
+      span {
+        margin-top: 30px;
+        min-height: 25px;
+        min-width: 25px;
+      }
+
+      .fill-the-void {
+        height: 72px;
+      }
+
+      .total-like,
+      .total-stats {
+        color: black;
+        font-size: 17px;
+        height: fit-content;
+
+        @media screen and (max-width: @tablet-screen) {
+          font-size: 12px;
+          color: white;
+        }
+      }
+
+      .month-to-now {
+        margin: 0 auto;
+        min-width: max-content;
+        height: fit-content;
+        position: absolute;
+        bottom: 0;
+        font-size: 11px;
+
+        @media screen and (max-width: @tablet-screen) {
+          position: relative;
+          margin-top: 30px;
+          font-size: 10px;
+          max-width: min-content;
+          min-width: unset;
+
+        }
+      }
+
+      .anticon-heart {
+        cursor: pointer;
+        color: @secondary-color;
+        font-size: 30px;
+        animation: zoom-in-zoom-out 2s ease-in-out infinite;
+
+        &:hover {
+          color: @red;
+        }
+      }
+
+      @keyframes zoom-in-zoom-out {
+        0% {
+          transform: scale(0.5);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(0.5);
+        }
+      }
+
+      .anticon {
+        border-radius: 50%;
+        cursor: pointer;
+        color: black;
+        background-color: transparent;
+        padding: 7px;
+        font-size: 25px;
+      }
+
+      .anticon-custom {
+        background-color: transparent;
+      }
+
+      .active-icon {
+        color: @primary-color;
+      }
+
+      .disable-icon {
+        pointer-events: none;
+      }
+
+      .normal {
+        width: max-content;
+        margin: 100px auto 0;
+        border: none;
+
+        .anticon-custom {
+          font-size: 30px;
+        }
+      }
+
+      .icons-gr {
+        .wrapper-sidebar-icons {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+
+
+        .btn-live {
+          background-color: @red;
+          color: @white;
+          max-width: 75px;
+          height: auto;
+          border-radius: 5px;
+
+          span {
+            word-wrap: break-word;
+            white-space: normal;
+          }
+
+          &:hover {
+            background-color: @white;
+            color: @hover-color;
+          }
+        }
+      }
+
+      .icons-gr:last-child {
+        margin-top: auto;
+        margin-bottom: 10px;
+      }
+    }
+
+
+
+    @media screen and (max-width: @tablet-screen) {
+      .gr-icons {
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+        font-size: 20px;
+        height: 100%;
+        justify-content: flex-start;
+
+        span {
+          margin-top: 25px;
+          min-height: 20px;
+          min-width: 20px;
+        }
+
+        .icons-gr:last-child {
+          margin-top: auto;
+          margin-bottom: 70px;
+        }
+
+        color: white;
+        font-size: 20px;
+
+        .anticon {
+          padding: 5px;
+          color: white;
+          background-color: rgba(255, 255, 255, 0.1);
+          opacity: 0.8;
+          font-size: 20px;
+        }
+
+        .active-icon {
+          color: @primary-color;
+        }
+      }
+
+      .lib-icons {
+        min-height: 70px;
+
+        .anticon-menu-unfold {
+          cursor: pointer;
+          color: @secondary-color;
+          font-size: 20px;
+        }
+
+        .anticon {
+          padding: 5px;
+          color: white;
+          background-color: rgba(255, 255, 255, 0.1);
+          opacity: 0.8;
+          font-size: 20px;
+        }
+
+        .btn-live {
+          max-width: 72px;
+        }
+
+        .ant-btn {
+          font-size: 10px;
+        }
+
+        .active-icon {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}
+
+.render-icon {
+  svg {
+    shape-rendering: auto !important;
+  }
+}

@@ -1,0 +1,475 @@
+@import '../../../../../style/vars.less';
+
+.sidebar-container {
+  max-height: 100%;
+  margin: 10px 0 10px 0;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  .top-sidebar {
+    text-align: center;
+
+    .create-account {
+      cursor: pointer;
+      color: @primary-color;
+
+      &:hover {
+        opacity: 0.6;
+        color: @hover-color;
+      }
+    }
+
+    .login {
+      border: 2px solid darkcyan;
+      padding: 2%;
+
+      .button-login {
+
+        display: flex;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+        aspect-ratio: 5/1;
+
+
+        .auth {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: aliceblue !important;
+          color: gray !important;
+          width: 100%;
+          padding: 0;
+          border: none;
+          outline: none;
+          border-radius: 0% !important;
+          border: 2px solid darkcyan !important;
+          background-image: none;
+          font-weight: 400;
+        }
+
+        .twitter-button {
+          display: flex;
+          flex-direction: column;
+          color: gray;
+          border: 2px solid darkcyan !important;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          width: 100%;
+          outline: none;
+          line-height: initial;
+          font-size: 11px;
+          font-weight: 600;
+
+          .anticon {
+            font-size: 20px;
+            margin-right: 5px;
+            color: @twitter-color;
+
+          }
+
+          &:disabled {
+            pointer-events: none;
+          }
+        }
+
+        .google-button {
+          width: 100%;
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px !important;
+          border: 2px solid darkcyan !important;
+          outline: none;
+          height: auto;
+          line-height: initial;
+          box-shadow: none !important;
+          margin: 0 2px 0 2px !important;
+
+          * {
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
+          &:disabled {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    .login-sidebar-form {
+      font-size: x-large;
+      color: cadetblue;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0 10px 0;
+    }
+
+    .divider-login {
+      border-top-color: darkcyan;
+      font-size: 14px;
+    }
+
+    .ant-divider-inner-text {
+      min-width: 90%;
+      white-space: normal;
+    }
+
+    #login-form {
+      border: 2px solid darkcyan;
+      padding: 5px;
+
+      .form-input {
+        border: 1px solid darkcyan;
+      }
+
+      .login-field {
+        padding: 0;
+
+        .ant-form-item-control-input {
+          .ant-input-affix-wrapper {
+            padding: 0 10px;
+          }
+        }
+      }
+
+      .gender-field {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .forgot-password-link {
+        color: blue;
+        margin-left: 10px;
+      }
+
+      .form-item-btn {
+        text-align: center;
+
+        .btn-create {
+          background-color: #c0349a;
+        }
+
+        .ant-btn {
+          padding: 0 15px;
+        }
+      }
+
+      .agree-text {
+        max-width: 90%;
+        padding-left: 4px;
+        float: right;
+        text-align: left;
+      }
+    }
+
+    .social-login {
+      margin: auto;
+      text-align: center;
+      font-size: 12px;
+      max-width: 400px;
+
+      .twitter-button {
+        background-color: @twitter-color;
+        color: @white;
+        border: none;
+        padding: 10px;
+        margin-bottom: 2%;
+        cursor: pointer;
+        width: 100%;
+        outline: none;
+        border: none;
+
+
+        .anticon {
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          pointer-events: none;
+        }
+      }
+
+      .google-button {
+        color: @gray;
+        border: none;
+        padding: 10px;
+        margin-bottom: 2%;
+        cursor: pointer;
+        width: 100%;
+        outline: none;
+        border: 1px solid yellow !important;
+
+        .anticon {
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        div {
+          &:first-child {
+            margin-right: 0 !important;
+          }
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .info-right-bar {
+      // text-transform: capitalize;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: flex-start;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      .verifyIcon {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid @primary-color;
+        padding: 2px;
+        cursor: pointer;
+        object-fit: cover;
+      }
+
+      .profile-name {
+        display: block;
+        margin: 0 auto;
+        font-size: 15px;
+
+        .user-name {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          span {
+            padding: 1px;
+          }
+        }
+
+        .sub-name {
+          display: flex;
+          justify-content: flex-start;
+          color: @grey-color;
+          font-size: 11px;
+        }
+      }
+
+      .ant-image-mask {
+        opacity: 0;
+      }
+    }
+
+    .menu {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      flex-direction: column;
+      row-gap: 10px;
+      margin-bottom: 22em;
+
+      .btn-menu-homepage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+          display: flex;
+          min-width: 110px;
+          margin-top: auto;
+          margin-left: 5px;
+
+        }
+      }
+    }
+  }
+
+  // performer info
+  .performer-info {
+    .infomation {
+      display: flex;
+
+      .buttons {
+        display: grid;
+        width: 50%;
+        text-align: center;
+
+        .ant-btn {
+          padding: 0;
+        }
+
+        .btn-follow {
+          color: @red;
+        }
+
+        .btn-live {
+          height: 70px;
+          width: 80px;
+          margin: auto;
+          display: grid;
+          background: @red;
+          color: @white;
+
+          svg {
+            color: darkcyan;
+          }
+        }
+      }
+
+      .user-name {
+        width: 50%;
+        text-align: center;
+
+        img {
+          display: block;
+          width: 100px;
+          height: 100px;
+          margin: auto;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  // message box
+  .gift-message-box {
+    background: @light-grey;
+    padding: 10px;
+    margin-top: 10px;
+
+    .notification-1 {
+      display: flex;
+
+      svg {
+        width: 1.2em;
+        height: 1.2em;
+      }
+    }
+
+    .notification-2 {
+      display: flex;
+
+      svg {
+        width: 1.6em;
+        height: 1.6em;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .notification-3 {
+      display: flex;
+
+      svg {
+        width: 2.0em;
+        height: 2.0em;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  // Gift list box
+  .gift-list-box {
+
+    .gift-list {
+      display: flex;
+      overflow: hidden;
+      overflow-x: scroll;
+    }
+
+    img {
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .price {
+      display: flex;
+      justify-content: center;
+    }
+
+    .conform-send-gift {
+      padding: 10px;
+      border-bottom: 1px solid;
+
+      .ant-btn {
+        width: 50%;
+        border-radius: 10px;
+        background: @red;
+        color: @white;
+      }
+
+      .ant-checkbox-wrapper {
+        width: 50%;
+        text-align: justify;
+        justify-content: end;
+
+        .ant-checkbox-inner {
+          border: 1px solid @grey-color;
+        }
+      }
+    }
+
+    .total-tokens {
+      text-align: end;
+      margin-bottom: 10px;
+
+      .ant-btn {
+        border: 1px solid @primary-color;
+        border-top: none;
+        color: @primary-color;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        &:hover {
+          background: @hover-color;
+          color: @white;
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  // Comment box
+  .comment-box {
+    height: 400px;
+
+    .cmt-list {
+      height: 100%;
+    }
+
+    .check-comment {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  background-color: gray;
+  border-color: gray;
+}

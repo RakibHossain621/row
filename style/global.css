@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+  overflow-x: hidden;
+}
+
+
+@layer components {
+  .menu-link {
+   @apply flex items-center w-full h-12 gap-3 px-3 text-base text-black rounded-xl hover:bg-pink-50 hover:text-purple-900 focus:outline-none focus:ring-2 focus:ring-purple-900;
+  }
+}
+
+/* extra classes */
+.outline-4 {
+  outline-width: 4px !important;
+}
+
+.filter-invert {
+  filter: invert(1)
+}
+
+.filter-none {
+  filter: none;
+}
+.z-100{
+  z-index: 100;
+  top: -30px;
+}
+
+
+/* General style for the input range */
+input[type="range"].progressBarThumbnail {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  max-width: 300px;
+  height: 8px; /* Track height */
+  background: #BABABABA;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+input[type="range"].progressBarThumbnail::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -6px; /* Center the thumb vertically */
+  border-radius: 50%;
+  background: #2CB1EC;
+  cursor: pointer;
+}
+
+/* Firefox */
+input[type="range"].progressBarThumbnail::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2CB1EC;
+  cursor: pointer;
+}
+
+/* Firefox track fix (to make sure thumb stays centered) */
+input[type="range"].progressBarThumbnail::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #BABABABA;
+  border-radius: 5px;
+}
+
+/* Microsoft Edge and IE */
+input[type="range"].progressBarThumbnail::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2CB1EC;
+  cursor: pointer;
+  margin-top: 0; /* Center the thumb */
+}
+
+/* Customize the track in WebKit */
+input[type="range"].progressBarThumbnail::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background: #BABABABA;
+  border-radius: 5px;
+}
+
+/* Customize the track in Edge and IE */
+input[type="range"].progressBarThumbnail::-ms-track {
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"].progressBarThumbnail::-ms-fill-lower {
+  background: #BABABABA;
+  border-radius: 5px;
+}
+
+input[type="range"].progressBarThumbnail::-ms-fill-upper {
+  background: #BABABABA;
+  border-radius: 5px;
+}
+
+/* On hover, increase opacity */
+input[type="range"].progressBarThumbnail:hover {
+  opacity: 1;
+}

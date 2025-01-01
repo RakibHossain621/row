@@ -1,0 +1,102 @@
+@import '../../../style/vars.less';
+
+.btn-google-login-box {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  span.ant-typography {
+    font-size: 12px;
+  }
+
+  .btn-google-login {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.custom {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 20px;
+
+    span.ant-typography {
+      font-size: 12px;
+    }
+
+    .btn-google-login {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+
+
+.google-button {
+  margin: auto;
+  font-size: 12px;
+  max-width: 400px;
+  background-color: @white;
+  color: @gray;
+  border: none;
+  padding: 10px;
+  margin-bottom: 2%;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  border: 1px solid yellow !important;
+
+
+
+  .anticon {
+    font-size: 14px;
+    margin-right: 5px;
+    color: red;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+
+.custom-google-button {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+  border: 2px solid darkcyan !important;
+  outline: none;
+  height: auto;
+  line-height: initial;
+  box-shadow: none !important;
+  margin: 0 2px 0 2px !important;
+  color: gray;
+  background-color: aliceblue !important;
+
+
+
+  .anticon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: @twitter-color;
+
+  }
+
+
+
+  * {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

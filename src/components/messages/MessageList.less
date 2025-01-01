@@ -1,0 +1,67 @@
+@import '../../../style/vars.less';
+
+.message-list {
+  height: 100%;
+  width: 100%;
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+.message-list-container {
+  height: 92%;
+  padding: 0 10px;
+  position: relative;
+  white-space: initial;
+  overflow: auto;
+
+  .sub-text {
+    text-align: center;
+    color: @highlight-color;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media all and (max-width: @mobile-screen) {
+      font-size: 14px;
+    }
+  }
+}
+
+.mess-recipient {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  border-bottom: 2px solid @grey;
+  padding: 2px 5px;
+  color: @grey-color;
+  cursor: pointer;
+  padding: 15px 0;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  .ant-avatar {
+    width: 31px;
+    height: 31px;
+    margin-right: 5px;
+  }
+
+  .anticon {
+    color: @primary-color;
+    font-size: 14px;
+    margin-left: 2px;
+  }
+
+  .anticon-delete {
+    color: @primary-color;
+    font-size: 22px;
+    margin-left: 2px;
+
+  }
+}

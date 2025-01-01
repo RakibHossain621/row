@@ -1,0 +1,62 @@
+@import '../../../style/vars.less';
+
+.home-container {
+  display: flex;
+  width: 100%;
+}
+
+.main-container {
+  .tab-follow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .checkBox-follow {
+    font-size: 9px;
+    font-weight: bold;
+    margin: 3em auto;
+    text-align: center;
+  }
+
+  .follow-gr {
+    .perform-gird-10 {
+      width: 13%;
+      font-size: 12px;
+      aspect-ratio: 3;
+
+      @media screen and (max-width: 950px) {
+        width: 25%;
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+.filter-item-follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+
+  &.input {
+    margin: 3em;
+    margin-top: 1em;
+  }
+
+  .avatar-follow {
+    width: 150px;
+    aspect-ratio: 2/3;
+  }
+}
+
+.button-follow {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin: 0px auto;
+}

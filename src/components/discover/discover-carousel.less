@@ -1,0 +1,135 @@
+@import '../../../style/vars.less';
+
+
+.hashtag-scroll {
+  border-radius: 5px;
+  // overflow: scroll;
+
+  // .infinite-scroll-component {
+  //   scroll-snap-type: none;
+  //   scroll-behavior: smooth;
+  // }
+}
+
+
+.trending-scroll {
+  border-radius: 5px;
+  overflow-x: scroll;
+  height: 350px;
+
+
+  .infinite-scroll-component {
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+.container-explore {
+  height: max-content;
+  min-height: 350px;
+  margin: 40px 0px 40px;
+
+  @media (max-width: @mobile-screen) {
+    min-height: 260px;
+  }
+
+  .list-carousel {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+
+
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .item-carousel {
+      position: relative;
+      padding: 1%;
+      width: 100%;
+      height: 100%;
+
+      .carousel-name {
+        width: 100%;
+        height: 20%;
+        max-height: 21px;
+        overflow: hidden;
+        overflow-wrap: break-word;
+      }
+
+      .ant-image {
+        width: 100%;
+        height: 80%;
+        border-radius: 10px;
+
+
+        .video-carousel {
+          aspect-ratio: 260/465;
+          object-fit: contain;
+          background: black;
+          border-radius: 15px;
+        }
+
+        .image-carousel {
+          aspect-ratio: 3/4;
+          object-fit: contain;
+          background: black;
+        }
+      }
+
+      .item-info-carousel {
+        display: flex;
+        overflow: hidden;
+        padding: 3%;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        color: white;
+
+        @media (max-width: @mobile-screen) {
+          font-size: 10px;
+          bottom: 18%;
+        }
+
+        * {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    color: black;
+
+    a {
+      color: black;
+    }
+
+    @media (max-width: @mobile-screen) {
+      font-size: large;
+    }
+  }
+
+  .most-title {
+    font-size: xx-large;
+    text-align: center !important;
+
+    @media (max-width: @mobile-screen) {
+      font-size: x-large;
+    }
+  }
+}
