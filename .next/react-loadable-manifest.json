@@ -5,7 +5,7 @@
       "file": "static/chunks/5.js"
     }
   ],
-  "@components/common/base/loader": [
+  "@components/comment/comment-form": [
     {
       "id": "./src/layouts/primary-layout.less",
       "file": "static/css/styles.chunk.css"
@@ -92,6 +92,38 @@
     },
     {
       "id": 14,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 19,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 20,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 21,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 22,
       "file": "static/css/styles.chunk.css"
     },
     {
@@ -212,6 +244,670 @@
     },
     {
       "id": 14,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 19,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 20,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 21,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 22,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/base/loader.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 15,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/notification/NotificationHeaderMenu.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 16,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/messages/ConversationListItem.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 17,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/messages/ConversationList.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 18,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/comment/comment-form.tsx",
+      "file": "static/chunks/7.js"
+    }
+  ],
+  "@components/comment/list-comments": [
+    {
+      "id": "./src/layouts/primary-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 1,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/layouts/sidebar.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 3,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./node_modules/video.js/dist/video-js.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 5,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/post/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 6,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/footer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 7,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/comment/comment.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 8,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/sidebar-layout/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 9,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./style/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 10,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 11,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./node_modules/tailwindcss/tailwind.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 12,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./style/global.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 13,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 14,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 19,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 20,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 21,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 22,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/base/loader.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 15,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/notification/NotificationHeaderMenu.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 16,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/messages/ConversationListItem.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 17,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/messages/ConversationList.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 18,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/layouts/primary-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 1,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/layouts/sidebar.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 3,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/video.js/dist/video-js.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/post/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 6,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/footer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 7,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/comment/comment.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 8,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/sidebar-layout/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 9,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./style/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 10,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 11,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/tailwindcss/tailwind.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 12,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./style/global.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 13,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 14,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 19,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 20,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 21,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 22,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/base/loader.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 15,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/notification/NotificationHeaderMenu.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 16,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/messages/ConversationListItem.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 17,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/messages/ConversationList.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 18,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/react-infinite-scroll-component/dist/index.es.js",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./src/components/comment/comment-form.tsx",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./src/components/comment/comment-item.tsx",
+      "file": "static/chunks/6.js"
+    },
+    {
+      "id": "./src/components/comment/list-comments.tsx",
+      "file": "static/chunks/6.js"
+    }
+  ],
+  "@components/common/base/loader": [
+    {
+      "id": "./src/layouts/primary-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 1,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/layouts/sidebar.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 3,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./node_modules/video.js/dist/video-js.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 5,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/post/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 6,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/footer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 7,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/comment/comment.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 8,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/sidebar-layout/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 9,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./style/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 10,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 11,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./node_modules/tailwindcss/tailwind.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 12,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./style/global.css",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 13,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 14,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 19,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 20,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 21,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 22,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/base/loader.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 15,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/notification/NotificationHeaderMenu.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 16,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/messages/ConversationListItem.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 17,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/messages/ConversationList.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 18,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/layouts/primary-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 1,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/layouts/sidebar.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 3,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/video.js/dist/video-js.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/post/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 6,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/footer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 7,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/comment/comment.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 8,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/sidebar-layout/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 9,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./style/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 10,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 11,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/tailwindcss/tailwind.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 12,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./style/global.css",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 13,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 14,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./pages/trending/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 19,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 20,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 21,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 22,
       "file": "static/chunks/styles.js"
     },
     {
@@ -351,6 +1047,38 @@
       "file": "static/css/styles.chunk.css"
     },
     {
+      "id": "./pages/trending/index.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 19,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 20,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 21,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/css/styles.chunk.css"
+    },
+    {
+      "id": 22,
+      "file": "static/css/styles.chunk.css"
+    },
+    {
       "id": "./src/components/common/base/loader.less",
       "file": "static/css/styles.chunk.css"
     },
@@ -471,6 +1199,38 @@
       "file": "static/chunks/styles.js"
     },
     {
+      "id": "./pages/trending/index.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 19,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/feed-video.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 20,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/common/layout/content-sidebar-layout.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 21,
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": "./src/components/performer/performer.less",
+      "file": "static/chunks/styles.js"
+    },
+    {
+      "id": 22,
+      "file": "static/chunks/styles.js"
+    },
+    {
       "id": "./src/components/common/base/loader.less",
       "file": "static/chunks/styles.js"
     },
@@ -547,6 +1307,10 @@
     {
       "id": "./src/lib/message.ts",
       "file": "static/chunks/4.js"
+    },
+    {
+      "id": "./src/components/performer/verified-email-form.tsx",
+      "file": "static/chunks/8.js"
     }
   ],
   "@components/photo/capture-photo": [
@@ -565,6 +1329,12 @@
     {
       "id": "./src/components/photo/capture-photo.tsx",
       "file": "static/chunks/3.js"
+    }
+  ],
+  "@components/report/report-form": [
+    {
+      "id": "./src/components/report/report-form.tsx",
+      "file": "static/chunks/9.js"
     }
   ]
 }

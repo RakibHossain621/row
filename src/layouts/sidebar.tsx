@@ -114,7 +114,7 @@ class Sidebar extends PureComponent<IProps> {
     totalEarning: 0,
     isSelectVideoOrPhoto: false,
   };
-
+ 
   async componentDidMount() {
     const { loggedIn } = this.props;
     const cookieViewNotification = await cookieService.getCookie(
@@ -216,8 +216,7 @@ class Sidebar extends PureComponent<IProps> {
   handleCancelPrivateChat(data: { conversationId: string; user: IUser }) {
     const { cancelPrivateRequest: handleCancel } = this.props;
     message.success(
-      `${
-        data?.user?.name || data?.user?.username
+      `${data?.user?.name || data?.user?.username
       }'ve cancelled private call request`,
       10
     );
@@ -245,8 +244,7 @@ class Sidebar extends PureComponent<IProps> {
     );
 
     await message.success(
-      `${
-        data?.user?.name || data?.user?.username
+      `${data?.user?.name || data?.user?.username
       }'seems busy. Please select another model for a private video chat`,
       15
     );
@@ -305,7 +303,7 @@ class Sidebar extends PureComponent<IProps> {
     Router.push(route);
     this.props.updateTabValue(index);
   }
-
+   
   async beforeLogout() {
     const { logout: handleLogout, user, logoutSuccess } = this.props;
     try {
@@ -387,11 +385,11 @@ class Sidebar extends PureComponent<IProps> {
 
     const { openProfile, openStripeAlert, loading, totalEarning } = this.state;
 
+
     return (
       <div
-        className={`main-header custom-sidebar ${
-          ui.sidebarCollapse ? "collapsed" : ""
-        }`}
+        className={`main-header custom-sidebar ${ui.sidebarCollapse ? "collapsed" : ""
+          }`}
         id="main-header"
       >
         <Event
@@ -465,14 +463,14 @@ class Sidebar extends PureComponent<IProps> {
                   </div>
                 </div>
                 <div className="flex justify-end ">
-                <LuMessageCircle size={20} />
+                  <LuMessageCircle size={20} />
                 </div>
               </div>
 
               <div className="flex flex-col gap-4 px-2 py-4 mb-3 border-t border-b border-base-400">
-                
+
                 <div className="flex  items-center  border-b border-base-400 pb-4">
-                 
+
                   <div className="w-1/2 border-r-1 border-base-400">
                     <button
                       onClick={() => this.handleNavigate("/wallet?ruby", 0)}
@@ -480,26 +478,26 @@ class Sidebar extends PureComponent<IProps> {
                       <a className="mb-1 text-base font-semibold leading-4 text-black">
                         Rubys
                         <div className="flex items-center gap-1">
-                         <div className='ml-2'>
-                           <RubyIcon className="w-5 h-5" />
-                          <span className="text-sm font-light">
-                            {Number.isInteger(user?.rubyBalance)
-                              ? user?.rubyBalance
-                              : Math.floor(user?.rubyBalance * 10) / 10}
-                          </span>
-                         </div>
+                          <div className='ml-2'>
+                            <RubyIcon className="w-5 h-5" />
+                            <span className="text-sm font-light">
+                              {Number.isInteger(user?.rubyBalance)
+                                ? user?.rubyBalance
+                                : Math.floor(user?.rubyBalance * 10) / 10}
+                            </span>
+                          </div>
                         </div>
                       </a>
                     </button>
                   </div>
+              
 
-                 
-                   {user?.balance > 0 && (
+                  {user?.balance > 0 && (
                     <div className="w-1/2">
                       <button
                         onClick={() =>
                           this.handleNavigate("/wallet?diamond", 1)
-                          
+
                         }
                         className='pl-4'
                       >
@@ -519,52 +517,58 @@ class Sidebar extends PureComponent<IProps> {
                   )}
                 </div>
 
-               
+
                 <div className="flex  items-center ">
-                 
+
                   {!user?.roles?.includes(
                     ROLE_PERMISSIONS.ROLE_HOST_PRIVATE
                   ) && (
-                    <div className="w-1/2 border-r-1 border-base-400">
-                     <div className="ml-12px">
-                     <h4 className="mb-1 text-sm font-semibold leading-4 text-black">
-                        Fans
-                      </h4>
-                      <span className="text-sm font-light">
-                        {user?.stats?.totalFollower}
-                      </span>
-                     </div>
-                    </div>
-                  )}
+                      <div className="w-1/2 border-r-1 border-base-400">
+                        <div className="">
+                        <button onClick={() => this.handleNavigate(`/model/list-follow?id=${user._id} `, 2)} className="mb-1 text-sm font-semibold leading-4 text-black">
+                           <div className="">
+                           <p >Fans</p>
+                            <p className="text-sm font-light text-left">
+                              {user?.stats?.totalFollower}
+                            </p>
+                           </div>
+                          </button>
+                         
+                        </div>
+                        <button  >
+                        </button>
+                      </div>
+                    )}
 
-                 
+
                   <div className="w-1/2 pl-4">
-                    <div className="">
-                      <h4 className="mb-1 text-sm font-semibold leading-4 text-black">
-                      Following
-                    </h4>
-                    <span className="text-sm font-light">
-                      {user?.stats?.totalFollowing}
-                    </span>
+                    <div className="mt-[-1.5em]">
+                      <button onClick={() => this.handleNavigate(`/model/list-follow?id=${user._id}`, 3)} className="mb-1 text-sm font-semibold leading-4 text-black">
+                        <p>Following</p>
+                        <p className="text-sm font-light text-left">                 
+                          {user?.stats?.totalFollowing}
+                        </p>
+                      </button>
+
                     </div>
+
                   </div>
                 </div>
               </div>
-            
+
               <nav>
 
-              
+
 
                 <ul className="">
-                <TogglePhotoAndVideoCreatePost modals={modals} />
+                  <TogglePhotoAndVideoCreatePost modals={modals} />
                   <li>
                     <Link href="/model/account" passHref>
                       <a
-                        className={`menu-link ${
-                          (router.pathname.startsWith("/model/profile") ||
+                        className={`menu-link ${(router.pathname.startsWith("/model/profile") ||
                             router.pathname.startsWith("/model/account")) &&
                           "font-semibold"
-                        }`}
+                          }`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -616,10 +620,9 @@ class Sidebar extends PureComponent<IProps> {
                   <li className="border-b border-base-400">
                     <Link href="/model/bookmarks" passHref>
                       <a
-                        className={`menu-link ${
-                          router.pathname === "/model/bookmarks" &&
+                        className={`menu-link ${router.pathname === "/model/bookmarks" &&
                           "font-semibold"
-                        }`}
+                          }`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -723,10 +726,9 @@ class Sidebar extends PureComponent<IProps> {
                   <li className="border-b border-base-400 py-2 ">
                     <Link href="/broadcaster-dashboard" passHref>
                       <a
-                        className={`menu-link ${
-                          router.pathname === "/broadcaster-dashboard" &&
+                        className={`menu-link ${router.pathname === "/broadcaster-dashboard" &&
                           "font-semibold"
-                        }`}
+                          }`}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -779,7 +781,7 @@ class Sidebar extends PureComponent<IProps> {
                       </a>
                     </Link>
                   </li> */}
-                  
+
 
                   <li className="border-b border-base-400">
                     <Link href="/help" passHref>

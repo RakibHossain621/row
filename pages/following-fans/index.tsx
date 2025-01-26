@@ -1,57 +1,72 @@
-import React, { Component } from 'react'
-import PageHeader from "src/layouts/page-header";
-import "../../src/layouts/home-page-header.less";
-import clsx from "clsx";
-interface ITabProps {
-  key?: string;
-  label?: string;
-  tab: any;
-  disabled?: boolean;
-  icon?: JSX.Element
+import React, { useCallback, useEffect } from "react";
+import { connect, useDispatch,} from "react-redux";
+import { AppButton } from "@components/ui/shared/AppButton";
+import { updateTabValue } from "@redux/ui/actions";
+
+
+const TrendingHeaderTabs: React.FC<{ handleTabChange: (tab: any) => void, selectedTabIndex: number; user: any ,performer }> = ({ handleTabChange, selectedTabIndex, user,performer }) => {
+  const dispatch = useDispatch();
+  const handleTabClick = useCallback(
+    (tab: string, tabIndex: number) => {
+      if (selectedTabIndexs !== tabIndex) {
+        handleTabChange(tab);
+        dispatch(updateTabValue(tabIndex));
+      }
+     
+    },
+    [handleTabChange, selectedTabIndex]
+  );
+
+  const selectedTabIndexs = Number(selectedTabIndex)
+  
+  useEffect(() => {
+
+    if (selectedTabIndexs === 2 || selectedTabIndexs === 3) {
+      const tab = selectedTabIndexs === 2 ? "follower" : "following";
+      handleTabChange(tab);
+    }
+  }, [selectedTabIndexs]);
+
+  
+
+  return (
+    <header className="pb-3 flex flex-col items-center justify-center gap-2 w-full flex-wrap">
+      <nav className="w-full md:w-auto bg-gray-200 p-1 rounded-full text-center flex items-center justify-center">
+        <AppButton
+          className={`flex-1 border-0 flex items-center justify-center ${selectedTabIndexs === 2 ? "" : "bg-transparent"
+            }`}
+          variant="tertiary"
+          onClick={() => handleTabClick("follower", 2)}
+        >
+          <div className="flex gap-3">
+            <span>Fans</span>
+            <span>{performer.stats.totalFollower}</span>
+          </div>
+        </AppButton>
+
+        <AppButton
+          className={`flex-1 border-0 flex items-center justify-center ${selectedTabIndexs === 3 ? "" : "bg-transparent"
+            }`}
+          variant="tertiary"
+          onClick={() => handleTabClick("following", 3)}
+        >
+          <div className="flex gap-3">
+            <span>Following</span>
+            <span>{performer.stats.totalFollowing}</span>
+          </div>
+        </AppButton>
+      </nav>
+    </header>
+  );
+};
+
+const mapStates = (state: any) => ({
+  selectedTabIndex: state.ui.selectedTabIndex,
+  user: { ...state.user.current }
+})
+
+const mapDispatch = {
+  updateTabValue
 }
-interface IProps {
-  handleTabChange: Function;
-  tabs: Array<ITabProps>;
-  defaultTab?: string;
-  className?:string
-  title?:string
-}
-const tabs =[
-  {
-    key: 'Fanses',
-    label: 'Fans'
-  },
-  {
-    key: 'Follwer',
-    label: 'Following'
-  },
-]
 
-class followingFans  extends Component<IProps> { 
-
-  render() {
-    const { title,  defaultTab, handleTabChange, className } = this.props;
-    return (
-      <div className="home-page-header" id="tab-header">
-           <h3 className="home_title mb-2 text-center text-black">{title}</h3>
-           <PageHeader
-             bordered={false}
-             className={clsx('home_page_header rounded-full p-1', className)}
-           >
-             {tabs.map((tab) => (
-               <div
-                 className={`rounded-full flex items-center cursor-pointer gap-2 justify-center px-6 py-3 ${tab.key === defaultTab ? 'active_width' : 'flex-1'}`}
-                 key={tab.key}
-                 onClick={() => handleTabChange(tab.key)}
-               >
-                 <p className="text-[#ADADAD]">{tab.label}</p>
-               </div>
-             ))}
-           </PageHeader>
-         </div>
-    )
-  }
-}
-
-export default followingFans;
-
+export default connect(mapStates, mapDispatch)(TrendingHeaderTabs);

@@ -1,5 +1,6 @@
 /* global JSX */
 export interface IPerformer {
+  totalViewer: any;
   map(arg0: (performer: any) => JSX.Element): import('react').ReactNode;
   length: number;
   _id: string;

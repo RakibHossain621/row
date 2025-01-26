@@ -373,11 +373,11 @@ class Header extends PureComponent<IProps> {
   }
 
   handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const isSticky = scrollPosition > 50;
-    if (isSticky !== this.state.isSticky) {
-      this.setState({ isSticky });
-    }
+    // const scrollPosition = window.scrollY;
+    // const isSticky = scrollPosition > 50;
+    // if (isSticky !== this.state.isSticky) {
+    //   this.setState({ isSticky });
+    // }
   };
 
   render() {

@@ -149,6 +149,7 @@ class PerformerProfile extends PureComponent<IProps> {
 
   async componentDidMount() {
     const el = document.querySelector('.main-container');
+    
     const queryParams = new URLSearchParams(window.location.search);
     const value = queryParams.get('tab')
     if (value) {
@@ -365,6 +366,10 @@ class PerformerProfile extends PureComponent<IProps> {
     setTimeout(() => this.setState({ copied: false }), 2500);
   };
 
+ handleNavigate(route: string, index: number) {
+    Router.push(route);
+  }
+
   render() {
     const {
       error, performer, ui, currentUser, feedState, countries, modals, updateModals, onFollow
@@ -391,7 +396,7 @@ class PerformerProfile extends PureComponent<IProps> {
       tab
     } = this.state;
     const config = getGlobalConfig();
-
+   console.log(currentUser)
     return (
       // <Layout>
       //   <Head>
@@ -775,7 +780,7 @@ class PerformerProfile extends PureComponent<IProps> {
                   <h2 className='text-2xl text-gray-900 xl:text-3xl'>
                   {performer.firstName} {performer.lastName}
                   </h2>
-
+            
                   {performer.roles?.includes(ROLE_PERMISSIONS.ROLE_FAN_VERIFIED) && <svg className='block w-8 h-8' xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                     <g clipPath="url(#clip0_2241_45931)">
                       <mask id="mask0_2241_45931" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
@@ -803,7 +808,7 @@ class PerformerProfile extends PureComponent<IProps> {
 
                 <div className='flex items-end gap-2 mb-4 md:mb-7'>
                   <span className='text-base text-black '>@{performer.username} </span>
-
+                 
                   <CopyToClipboard onCopy={() => this.onCopy()} text={`@${performer.username}`}>
                     <button>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -826,8 +831,12 @@ class PerformerProfile extends PureComponent<IProps> {
 
                   {this.state.copied ? <span className='text-xs text-gray-500'>Copied.</span> : null}
                 </div>
+                  
+               <button onClick={() => this.handleNavigate(`/model/list-follow?id=${performer._id} `, 2)} >
+               <span className='text-base font-semibold text-black'> {performer?.stats?.totalFollower ||  0}
+               {' '} fans </span>
+               </button>
 
-                {/* <span className='text-base font-semibold text-black'>100 fans</span> */}
               </div>
 
               <div className='hidden pt-16 xl:pt-20 md:block'>

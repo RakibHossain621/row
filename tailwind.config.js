@@ -114,6 +114,9 @@ module.exports = {
       margin: {
         '12px': '12px',
       },
+      margin:{
+        "-1.5em" : '-1.5em',
+      }
     },
   },
   plugins: [

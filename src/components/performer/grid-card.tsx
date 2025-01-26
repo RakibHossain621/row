@@ -11,17 +11,18 @@ import { connect } from 'react-redux';
 import { streamService } from 'src/services';
 import dynamic from 'next/dynamic';
 import { JoinRoomButton } from '@components/live-now/JoinRoomButton';
+import { Router } from 'next/router';
 
 const Player = dynamic(() => import('src/antmedia/Player'), { ssr: false });
 
 interface IProps {
-  performer: any;
-  currentUser: IUser;
-  pathname: string;
+  performer?: any;
+  currentUser?: IUser;
+  pathname?: string;
   modelNumber: number;
   as: string;
-  showButtonFollow: boolean;
-  getPerformerList: Function;
+  showButtonFollow?: boolean;
+  getPerformerList?: Function;
   showModelNumber?: boolean;
   hideFollower?: boolean;
   filter?:any;
@@ -36,7 +37,7 @@ class PerformerGridCard extends PureComponent<IProps> {
     totalFollowers: 0,
     number: this?.props?.modelNumber || 0
   }
-
+ 
   componentDidMount() {
     const { performer, filter } = this.props;
     this.setState({ totalFollowers: performer?.stats?.totalFollower });
@@ -56,7 +57,7 @@ class PerformerGridCard extends PureComponent<IProps> {
   onMouseEnter = async () => {
     const { performer } = this.props;
     try {
-      const resp = await Promise.resolve(streamService.getLiveStreaming(performer._id));
+      const resp = await Promise.resolve(streamService.getLiveStreaming(performer?._id));
       if (resp.data) this.setState({ streamId: resp.data });
     } catch (error) {
       this.setState({ streamId: '' });
@@ -159,9 +160,9 @@ class PerformerGridCard extends PureComponent<IProps> {
         <ButtonFollow
           performer={performer}
           isHideOnClick
-          targetId={performer._id}
-          sourceId={currentUser._id}
-          isFollow={performer.isFollowed}
+          targetId={performer?._id}
+          sourceId={currentUser?._id}
+          isFollow={performer?.isFollowed}
           getPerformerList={getPerformerList}
           updateFollower={(val) => this.setState({ totalFollowers: totalFollowers + val })}
         />

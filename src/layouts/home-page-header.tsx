@@ -3,7 +3,6 @@ import PageHeader from "src/layouts/page-header";
 import "./home-page-header.less";
 import clsx from "clsx";
 
-
 interface ITabProps {
   key: string;
   label?: string;
@@ -19,7 +18,7 @@ interface IProps {
   title?:string
 }
 
-function HomePageHeader({ handleTabChange, tabs, defaultTab, title='Recommended', className }: IProps) {
+function HomePageHeader({ handleTabChange, tabs, defaultTab, title, className }: IProps) {
   return (
     <div className="home-page-header" id="tab-header">
       <h3 className="home_title mb-2 text-center text-black">{title}</h3>

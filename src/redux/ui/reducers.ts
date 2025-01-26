@@ -2,6 +2,10 @@ import { merge } from 'lodash';
 import { createReducers } from '@lib/redux';
 import { updateUIValue, loadUIValue, updateTabValue, updateSidebarCollapseValue } from './actions';
 
+  const selectedTabIndex = typeof window !== 'undefined' && localStorage.getItem('selectedTabIndex')
+  ? Number(localStorage.getItem('selectedTabIndex'))
+  :0
+
 const initialState = {
   theme: 'light',
   siteName: '',
@@ -12,8 +16,10 @@ const initialState = {
   footerContent: '',
   modelBenefit: '',
   userBenefit: '',
-  selectedTabIndex: 0,
+  selectedTabIndex:  selectedTabIndex, 
   sidebarCollapse: false,
+  fans: 0,
+  following: 0,
 };
 
 const uiReducers = [
@@ -34,6 +40,9 @@ const uiReducers = [
   {
     on: updateTabValue,
     reducer(state: any, data: any) {
+      if (process.browser) {
+        localStorage.setItem('selectedTabIndex', data.payload);
+      }
       return {
         ...state,
         selectedTabIndex: data.payload

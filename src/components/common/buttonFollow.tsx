@@ -124,7 +124,7 @@ class ButtonFollow extends PureComponent<IProps> {
               </AppButton>
             :
               <AppButton
-                className={`rounded-t-none w-full rounded-b-lg ${ performer.gender === 'male' ? 'bg-blue-900' : ''}`}
+                className={`rounded-t-none w-full rounded-b-lg ${ performer?.gender === 'male' ? 'bg-blue-900' : ''}`}
                 loading={loading}
                 onClick={this.handleFollow}
               >
@@ -145,7 +145,7 @@ class ButtonFollow extends PureComponent<IProps> {
               </AppButton>
             :
               <AppButton
-                className={`rounded-t-none w-full rounded-b-lg ${ performer.gender === 'male' ? 'bg-blue-900' : ''}`}
+                className={`rounded-t-none w-full rounded-b-lg ${ performer?.gender === 'male' ? 'bg-blue-900' : ''}`}
                 loading={loading}
                 onClick={this.handleFollow}
               >
